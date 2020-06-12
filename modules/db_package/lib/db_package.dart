@@ -9,7 +9,7 @@ import 'package:sqflite/sqflite.dart';
 List somevar;
 onLoad() async {
     var databasesPath = await getDatabasesPath();
-    var path = join(databasesPath, "asset.db");
+    var path = join(databasesPath, "mysteries_pack.db");
     var exists = await databaseExists(path);
 
     if (!exists) {
