@@ -25,7 +25,7 @@ flutter:
 
   # To add assets to your package, add an assets section, like this:
   assets:
-    - assets/mysteries_pack.db
+    - lib/assets/mysteries_pack.db
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   #
