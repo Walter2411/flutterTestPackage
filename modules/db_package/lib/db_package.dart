@@ -39,6 +39,7 @@ onLoad(somevar) async {
             ))
         .toList();
         print(somevar);
+        return somevar;
   }
 
 class RedText extends StatelessWidget {
