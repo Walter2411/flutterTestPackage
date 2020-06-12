@@ -51,7 +51,7 @@ class RedText extends StatelessWidget {
       child: Text(
         'red text',
         style: TextStyle(
-          color: Colors.blue
+          color: Colors.red
         ),
       
       )
