@@ -30,7 +30,7 @@ onLoad(somevar) async {
     final Database db = database;
     final List<Map<String, dynamic>> maps = await db.query('items');
     somevar = maps
-        .map((item) => DbItem(
+        .map((item) => DbItems(
               id: item['id'],
               category: item['category'],
               title: item['title'],
@@ -58,14 +58,14 @@ class RedText extends StatelessWidget {
   }
 }
 
-class DbItem {
+class DbItems {
   final int id;
   final int category;
   final String title;
   final String text;
   final int read;
 
-  DbItem({this.id, this.category, this.title, this.text, this.read});
+  DbItems({this.id, this.category, this.title, this.text, this.read});
 
   Map<String, dynamic> toMap() {
     return {
