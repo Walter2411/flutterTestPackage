@@ -6,10 +6,10 @@ import 'package:flutter/services.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
-
-onLoad(somevar) async {
+List somevar;
+onLoad() async {
     var databasesPath = await getDatabasesPath();
-    var path = join(databasesPath, "mysteries_pack.db");
+    var path = join(databasesPath, "asset.db");
     var exists = await databaseExists(path);
 
     if (!exists) {
@@ -39,7 +39,9 @@ onLoad(somevar) async {
             ))
         .toList();
         print(somevar);
-        return somevar;
+  }
+  getdata(){
+    return somevar;
   }
 
 class RedText extends StatelessWidget {
@@ -51,7 +53,7 @@ class RedText extends StatelessWidget {
       child: Text(
         'red text',
         style: TextStyle(
-          color: Colors.red
+          color: Colors.blue
         ),
       
       )
