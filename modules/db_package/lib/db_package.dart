@@ -28,7 +28,7 @@ onLoad(somevar) async {
     }
     var database = await openDatabase(path);
     final Database db = database;
-    final List<Map<String, dynamic>> maps = await db.query('items');
+    final List<Map<String, dynamic>> maps = await db.query('category');
     somevar = maps
         .map((item) => DbItems(
               id: item['id'],
