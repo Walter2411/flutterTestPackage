@@ -29,7 +29,7 @@ onLoad(somevar) async {
     var database = await openDatabase(path);
     final Database db = database;
     final List<Map<String, dynamic>> maps = await db.query('items');
-    return somevar = maps
+    somevar = maps
         .map((item) => DbItem(
               id: item['id'],
               category: item['category'],
@@ -38,6 +38,7 @@ onLoad(somevar) async {
               read: item['read'],
             ))
         .toList();
+        print(somevar);
   }
 
 class RedText extends StatelessWidget {
