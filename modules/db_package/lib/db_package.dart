@@ -42,7 +42,7 @@ onLoad() async {
   }
   Future updateRead(DbItems item) async {
     var databasesPath = await getDatabasesPath();
-    var path = join(databasesPath, "asset.db");
+    var path = join(databasesPath, "mysteries_pack.db");
     var database = await openDatabase(path);
     final Database db = database;
     await db.update(
