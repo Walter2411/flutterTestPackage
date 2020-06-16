@@ -40,6 +40,18 @@ onLoad() async {
         .toList();
         print(somevar);
   }
+  Future updateRead(DbItems item) async {
+    var databasesPath = await getDatabasesPath();
+    var path = join(databasesPath, "asset.db");
+    var database = await openDatabase(path);
+    final Database db = database;
+    await db.update(
+      'items',
+      item.toMap(),
+      where: "id = ?",
+      whereArgs: [item.id],
+    );
+  }
   getdata(){
     return somevar;
   }
