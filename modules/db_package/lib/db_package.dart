@@ -18,7 +18,7 @@ onLoad() async {
         await Directory(dirname(path)).create(recursive: true);
       } catch (_) {}
       ByteData data =
-          await rootBundle.load(join("assetsss", "mysteries_pack.db"));
+          await rootBundle.load(join("packages/db_package/assets", "mysteries_pack.db"));
       List<int> bytes =
           data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
 
